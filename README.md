@@ -15,6 +15,8 @@ To run this app you need:
 - Pandas
 - Streamlit
 - Base64
+- seaborn
+- lxml
 
 It's better if you run this inside a conda environment will be better, because most of the libraries are pre-installed there.
 
