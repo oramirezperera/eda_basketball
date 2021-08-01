@@ -72,8 +72,10 @@ if st.button('Barchart for triples'):
     df_selected_team.to_csv('output.csv', index=False)
     df = pd.read_csv('output.csv')
 
+
+
     with sns.axes_style("white"):
-        f, ax = plt.subplots(figsize=(7, 5))
-        ax = sns.barplot(x='Player', y='3P',hue='Tm' ,data=df)
+        f, ax = plt.subplots(figsize=(15, 5))
+        ax = sns.barplot(x='Tm', y='3P', data=df)
     
     st.pyplot(f)
