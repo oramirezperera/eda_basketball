@@ -67,3 +67,13 @@ if st.button('Intercorrelation Heatmap'):
         ax = sns.heatmap(corr, mask=mask, vmax=1, square=True)
     st.pyplot(f)
 
+if st.button('Barchart for triples'):
+    st.header('Barchart teams and triples')
+    df_selected_team.to_csv('output.csv', index=False)
+    df = pd.read_csv('output.csv')
+
+    with sns.axes_style("white"):
+        f, ax = plt.subplots(figsize=(7, 5))
+        ax = sns.barplot(x='Player', y='3P',hue='Tm' ,data=df)
+    
+    st.pyplot(f)
